@@ -11,13 +11,14 @@ export const useDarkMode = (key, initialValue) => {
   }
   useEffect(() => {
       if(darkMode === false){
-        document.querySelector('body').classList.remove = ('dark-mode');
+        document.body.className = '';
       }if(darkMode === true){
-        document.querySelector('body').classList.toggle = ('dark-mode');
+        document.body.className = 'dark-mode';
       }
     },
     [darkMode],
   )
+  
 
   return [darkMode, toggleMode]
 }
